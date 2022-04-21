@@ -20,3 +20,9 @@
 // SVM 생성 / 학습
 
 ![image](https://user-images.githubusercontent.com/90014998/164470674-235dc3b2-46e8-4707-b7bc-1dc3ccd3350f.png)
+
+
+# OpencvSVM / HOG
+
+![image](https://user-images.githubusercontent.com/90014998/164481739-2fd1ebb7-961d-411c-a818-0d8894936c6f.png)
+
