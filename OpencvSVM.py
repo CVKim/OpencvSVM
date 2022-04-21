@@ -19,6 +19,7 @@ def on_mouse(event, x, y, flags, _):
             oldx, oldy = x, y
             cv2.imshow('img', img)
 
+
 def norm_digit(img):
 
     m = cv2.moments(img)
@@ -58,7 +59,8 @@ train_desc = np.array(desc)
 train_desc = train_desc.squeeze().astype(np.float32)
 train_labels = np.repeat(np.arange(10), len(train_desc)/10)
 
-# SVM 학습
+# SVM 알고리즘 생성
+# Type / Gamma 조정 / 학습
 svm = cv2.ml.SVM_create()
 svm.setType(cv2.ml.SVM_C_SVC)
 svm.setKernel(cv2.ml.SVM_RBF)
@@ -66,6 +68,7 @@ svm.setC(2.5)
 svm.setGamma(0.50625)
 
 svm.train(train_desc, cv2.ml.ROW_SAMPLE, train_labels)
+
 #svm.save('svmdigits.yml')
 
 # 사용자 입력 영상에 대해 예측
